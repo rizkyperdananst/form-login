@@ -1,0 +1,92 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--blue-dark);
+    animation: bgColor 3s infinite;
+}
+
+@keyframes bgColor {
+    0% {
+        background-color: var(--blue-dark);
+    }
+    50% {
+        background-color: rgb(3, 3, 49);
+    }
+    75% {
+        background-color: rgb(14, 14, 46);
+    }
+    100% {
+        background-color: var(--blue-dark);
+    }
+}
+
+:root {
+    --white: white;
+    --blue-dark: rgb(2, 2, 19);
+}
+
+.card {
+    max-width: 300px;
+    height: 250px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 500px;
+    top: 200px;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+.card-header {
+    margin-top: -25px;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.card-body input {
+    padding: 7px;
+    display: block;
+    width: 85%;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: var(--blue-dark);
+
+}
+
+.card-body input:focus {
+    background-color: var(--white);
+}
+
+.card-footer button {
+    border: none;
+    padding: 8px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--blue-dark);
+    border-radius: 5px;
+    color: var(--white);
+    text-transform: uppercase;
+    border: 1px solid var(--white);
+}
+
+.card-footer button:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--blue-dark);
+}
+
+
+/* Media Responsive */
+
+@media (max-width: 600px) {
+    .card {
+        left: 110px;
+    }
+}
